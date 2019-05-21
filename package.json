@@ -1,0 +1,54 @@
+{
+  "name": "fx87",
+  "version": "0.0.0",
+  "description": "<NoDescription>",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "author": "Mgen (https://www.mgenware.com)",
+  "homepage": "https://github.com/mgenware/layit",
+  "bugs": "https://github.com/mgenware/layit/issues",
+  "keywords": [
+    "layit"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mgenware/layit.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "yarn run clean && yarn run compile && yarn run lint && yarn run t",
+    "t": "jest",
+    "build": "cross-env NODE_ENV=production yarn test",
+    "compile": "tsc -b tests",
+    "dev": "cross-env NODE_ENV=development yarn run clean && tsc -b tests -w",
+    "prepublishOnly": "yarn run test",
+    "lint": "tslint --project tsconfig.json --config tslint.json",
+    "clean": "del-cli dist && del-cli dist_tests"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js"
+    ]
+  },
+  "devDependencies": {
+    "@types/finalhandler": "^1.1.0",
+    "@types/jest": "^24.0.13",
+    "@types/node": "^12.0.2",
+    "@types/serve-index": "^1.7.29",
+    "@types/serve-static": "^1.13.2",
+    "cross-env": "^5.2.0",
+    "del-cli": "^1.1.0",
+    "jest": "^24.8.0",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "finalhandler": "^1.1.2",
+    "serve-index": "^1.9.1",
+    "serve-static": "^1.14.1"
+  }
+}
