@@ -24,7 +24,7 @@ function logError(err: Error) {
   console.error(chalk.red(err.stack || err.toString()));
 }
 
-export function serve(opt: IOptions) {
+export function serve(opt: IOptions): http.Server {
   if (!opt) {
     throw new Error(`opt argument cannot be empty`);
   }
@@ -58,5 +58,5 @@ export function serve(opt: IOptions) {
   });
   const port = opt.port || 8080;
   console.log(chalk.green(`Starting server on port ${port}`));
-  server.listen(port);
+  return server.listen(port);
 }
