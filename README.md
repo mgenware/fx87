@@ -9,6 +9,7 @@ Start a file server on current directory:
 ```ts
 const { serve } = require('fx87');
 
+// `serve` also returns an instance of http.Server object.
 serve({ path: './', port: 8080 });
 ```
 
