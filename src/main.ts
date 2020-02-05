@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import * as http from 'http';
 import * as finalhandler from 'finalhandler';
 import * as serveStatic from 'serve-static';
@@ -14,7 +16,7 @@ export class Route {
   }
 }
 
-export interface IOptions {
+export interface Options {
   path: string;
   port?: number;
   routes?: Route[];
@@ -24,7 +26,7 @@ function logError(err: Error) {
   console.error(chalk.red(err.stack || err.toString()));
 }
 
-export function serve(opt: IOptions): http.Server {
+export function serve(opt: Options): http.Server {
   if (!opt) {
     throw new Error(`opt argument cannot be empty`);
   }
