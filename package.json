@@ -1,18 +1,18 @@
 {
   "name": "fx87",
   "version": "1.0.1",
-  "description": "<NoDescription>",
+  "description": "Start a dev file server programmatically",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "author": "Mgen (https://www.mgenware.com)",
-  "homepage": "https://github.com/mgenware/layit",
-  "bugs": "https://github.com/mgenware/layit/issues",
+  "homepage": "https://github.com/mgenware/fx87",
+  "bugs": "https://github.com/mgenware/fx87/issues",
   "keywords": [
-    "layit"
+    "file server"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mgenware/layit.git"
+    "url": "https://github.com/mgenware/fx87.git"
   },
   "license": "MIT",
   "scripts": {

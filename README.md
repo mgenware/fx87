@@ -1,6 +1,6 @@
 # fx87
 
-Start a dev file server programmatically
+Start a dev file server programmatically.
 
 ## Examples
 
