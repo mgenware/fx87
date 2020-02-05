@@ -2,7 +2,7 @@ import * as http from 'http';
 import * as finalhandler from 'finalhandler';
 import * as serveStatic from 'serve-static';
 import * as serveIndex from 'serve-index';
-import chalk from 'chalk';
+import * as chalk from 'chalk';
 import * as UrlPattern from 'url-pattern';
 
 type RouteFn = (req: any, res: any) => void;
